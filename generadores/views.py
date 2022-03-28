@@ -1,4 +1,5 @@
 #from django.shortcuts import render
+
 from rest_framework import generics
 # from rest_framework import viewsets
 # from rest_framework.response import Response
@@ -84,8 +85,8 @@ class DetalleLecturaDispositivo(generics.RetrieveUpdateDestroyAPIView):
 
 
 
-"""
 
+"""
     queryset = Dispositivo.objects.all().filter(tipo_dispositivo__id=self.kwargs['pk'])
     
 
@@ -98,4 +99,5 @@ class BlogPostList(generics.ListCreateAPIView):
    def get_queryset(self):
       queryset = BlogPost.objects.filter(pk=self.kwargs['post_id'])
       return queryset
+
 """

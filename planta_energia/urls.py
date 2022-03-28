@@ -19,15 +19,15 @@ from rest_framework.schemas import get_schema_view
 from rest_framework_swagger.views import get_swagger_view  # Importamos el metodo swagger a utilizar.
 from django.views.generic import TemplateView
 
-schema_view = get_swagger_view(title='Documentación Generadores API')
+#schema_view = get_swagger_view(title='Documentación Generadores API')
 
 
 
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    # path('', include('generadores.urls'),),
     path('api/', include('generadores.urls')),
+
     path('api_schema/', get_schema_view(title="API generadores",
                                 description="API para monitoreo de generadores."),
          name='api_schema'),   
@@ -36,7 +36,4 @@ urlpatterns = [
         template_name='docs.html',
         extra_context={'schema_url':'api_schema'}
         ), name='swagger-ui'),
-    
-    # path('documentacion/', schema_view),
 ]
-

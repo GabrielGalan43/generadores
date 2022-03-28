@@ -1,4 +1,5 @@
 from rest_framework import serializers
+
 from generadores.models import (StatusDispositivo, TipoDispositivo,
                                 Dispositivo, LecturaDispositivo,
                                 )
@@ -27,4 +28,3 @@ class LecturaDispositivoSerializer(serializers.ModelSerializer):
     class Meta:
         model = LecturaDispositivo
         fields = '__all__'
-        

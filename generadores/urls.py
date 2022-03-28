@@ -1,11 +1,11 @@
 from django.urls import path
 from . import views
 
-"""
+
 from generadores.views import (ListaDispositivo, DetalleDispositivo,
                                ListaTipoDispositivo, ListaStatusDispositivo,
                                ListaLecturaDispositivo, DetalleLecturaDispositivo,)
-"""
+
 
 
 urlpatterns = [        
